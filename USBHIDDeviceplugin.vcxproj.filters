@@ -76,112 +76,112 @@
     <ClCompile Include="USBHIDDeviceplugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_USBHIDDeviceplugin.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_USBHIDDevice_dialog.cpp">
       <Filter>Form Files\Generated Files\Debug_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_USBHIDDeviceplugin.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_USBHIDDevice_dialog.cpp">
       <Filter>Form Files\Generated Files\Debug_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_USBHIDDeviceplugin.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_USBHIDDevice_dialog.cpp">
       <Filter>Form Files\Generated Files\Release_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_USBHIDDeviceplugin.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_USBHIDDevice_dialog.cpp">
       <Filter>Form Files\Generated Files\Release_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_USBHIDDeviceplugin.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_USBHIDDevice_dialog.cpp">
       <Filter>Form Files\Generated Files\Template_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_USBHIDDeviceplugin.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_USBHIDDevice_dialog.cpp">
       <Filter>Form Files\Generated Files\Template_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_USBHIDDevice_dialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_USBHIDDeviceplugin.cpp">
       <Filter>Form Files\Generated Files\Debug_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_USBHIDDevice_dialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_USBHIDDeviceplugin.cpp">
       <Filter>Form Files\Generated Files\Debug_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_USBHIDDevice_dialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_USBHIDDeviceplugin.cpp">
       <Filter>Form Files\Generated Files\Release_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_USBHIDDevice_dialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_USBHIDDeviceplugin.cpp">
       <Filter>Form Files\Generated Files\Release_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_USBHIDDevice_dialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_USBHIDDeviceplugin.cpp">
       <Filter>Form Files\Generated Files\Template_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_USBHIDDevice_dialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_USBHIDDeviceplugin.cpp">
       <Filter>Form Files\Generated Files\Template_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_USBHIDDevice.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_USBHIDDevice.cpp">
       <Filter>Form Files\Generated Files\Debug_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_USBHIDDevice.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_USBHIDDevice.cpp">
       <Filter>Form Files\Generated Files\Debug_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_USBHIDDevice.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_USBHIDDevice.cpp">
       <Filter>Form Files\Generated Files\Release_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_USBHIDDevice.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_USBHIDDevice.cpp">
       <Filter>Form Files\Generated Files\Release_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_USBHIDDevice.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_USBHIDDevice.cpp">
       <Filter>Form Files\Generated Files\Template_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_USBHIDDevice.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_USBHIDDevice.cpp">
       <Filter>Form Files\Generated Files\Template_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_renderarea.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_renderarea.cpp">
       <Filter>Form Files\Generated Files\Debug_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_renderarea.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_renderarea.cpp">
       <Filter>Form Files\Generated Files\Debug_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_renderarea.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_renderarea.cpp">
       <Filter>Form Files\Generated Files\Release_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_renderarea.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_renderarea.cpp">
       <Filter>Form Files\Generated Files\Release_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_renderarea.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_renderarea.cpp">
       <Filter>Form Files\Generated Files\Template_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_renderarea.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_renderarea.cpp">
       <Filter>Form Files\Generated Files\Template_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_hidcapturethread.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_hidcapturethread.cpp">
       <Filter>Form Files\Generated Files\Debug_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_hidcapturethread.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_hidcapturethread.cpp">
       <Filter>Form Files\Generated Files\Debug_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_hidcapturethread.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_hidcapturethread.cpp">
       <Filter>Form Files\Generated Files\Release_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_hidcapturethread.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_hidcapturethread.cpp">
       <Filter>Form Files\Generated Files\Release_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_hidcapturethread.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_hidcapturethread.cpp">
       <Filter>Form Files\Generated Files\Template_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_hidcapturethread.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_hidcapturethread.cpp">
       <Filter>Form Files\Generated Files\Template_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Debug\Moc\moc_hidcalibratedialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_hidcalibratedialog.cpp">
       <Filter>Form Files\Generated Files\Debug_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Debug\Moc\moc_hidcalibratedialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Debug\Moc\moc_hidcalibratedialog.cpp">
       <Filter>Form Files\Generated Files\Debug_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Release\Moc\moc_hidcalibratedialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Release\Moc\moc_hidcalibratedialog.cpp">
       <Filter>Form Files\Generated Files\Release_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Release\Moc\moc_hidcalibratedialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Release\Moc\moc_hidcalibratedialog.cpp">
       <Filter>Form Files\Generated Files\Release_x64</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\Win32\Template\Moc\moc_hidcalibratedialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\Win32\Template\Moc\moc_hidcalibratedialog.cpp">
       <Filter>Form Files\Generated Files\Template_Win32</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Build_MSVC\Qt\x64\Template\Moc\moc_hidcalibratedialog.cpp">
+    <ClCompile Include="..\Build_MSVC\Qt\x64\Template\Moc\moc_hidcalibratedialog.cpp">
       <Filter>Form Files\Generated Files\Template_x64</Filter>
     </ClCompile>
   </ItemGroup>
@@ -195,12 +195,6 @@
     <ClInclude Include="StdAfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Build_MSVC\Qt\$(PlatformName)\$(ConfigurationName)\GeneratedFiles\ui_hidcalibratedialog.h">
-      <Filter>Form Files\Generated Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Build_MSVC\Qt\$(PlatformName)\$(ConfigurationName)\GeneratedFiles\ui_USBHIDDevice_dialog.h">
-      <Filter>Form Files\Generated Files</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -209,6 +203,12 @@
     </ClInclude>
     <ClInclude Include="..\..\BrainStim\plugininterface.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Build_MSVC\Qt\$(PlatformName)\$(ConfigurationName)\GeneratedFiles\ui_hidcalibratedialog.h">
+      <Filter>Form Files\Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Build_MSVC\Qt\$(PlatformName)\$(ConfigurationName)\GeneratedFiles\ui_USBHIDDevice_dialog.h">
+      <Filter>Form Files\Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
