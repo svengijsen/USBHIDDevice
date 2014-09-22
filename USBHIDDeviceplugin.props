@@ -12,6 +12,8 @@
     <HIDAPI Condition="'$(Platform)' == 'Win32'">C:\Qt\HIDAPI\win32</HIDAPI>
     <HIDAPI Condition="'$(Platform)' == 'x64'">C:\Qt\HIDAPI\x64</HIDAPI>
     <BRAINSTIM_HOME>E:\Projects\BrainStim</BRAINSTIM_HOME>
+    <LocalDebuggerEnvironment>PATH=$(QTDIR)\bin%3b$(PATH)</LocalDebuggerEnvironment>
+    <LocalDebuggerCommand>$(BRAINSTIM_HOME)\Install\BrainStim_$(Platform)_$(Configuration).exe</LocalDebuggerCommand>
   </PropertyGroup>
   
   <Choose>
