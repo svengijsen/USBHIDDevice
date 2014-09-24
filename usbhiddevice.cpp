@@ -17,7 +17,7 @@
 //
 
 
-#include "USBHIDDevice.h"
+#include "usbhiddevice.h"
 #include <windows.h>
 #include <QTextStream>
 

@@ -17,7 +17,7 @@
 //
 
 
-#include "USBHIDDevice_dialog.h"
+#include "usbhiddevice_dialog.h"
 
 USBHIDDevice_Dialog::USBHIDDevice_Dialog(QWidget *parent) : QDialog(parent)
 {

@@ -64,16 +64,16 @@
     <ClCompile Include="renderarea.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="StdAfx.cpp">
+    <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="USBHIDDevice.cpp">
+    <ClCompile Include="usbhiddevice.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="USBHIDDevice_dialog.cpp">
+    <ClCompile Include="usbhiddevice_dialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="USBHIDDeviceplugin.cpp">
+    <ClCompile Include="usbhiddeviceplugin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Build_MSVC\Qt\Win32\Debug\Moc\moc_USBHIDDevice_dialog.cpp">
@@ -186,13 +186,13 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Global.h">
+    <ClInclude Include="global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="hidapi.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StdAfx.h">
+    <ClInclude Include="stdafx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="resource.h">
@@ -221,27 +221,27 @@
     <CustomBuild Include="renderarea.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="USBHIDDevice.h">
+    <CustomBuild Include="usbhiddevice.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="USBHIDDevice_dialog.h">
+    <CustomBuild Include="usbhiddevice_dialog.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="USBHIDDeviceplugin.h">
+    <CustomBuild Include="usbhiddeviceplugin.h">
       <Filter>Header Files</Filter>
     </CustomBuild>
     <CustomBuild Include="hidcalibratedialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
-    <CustomBuild Include="USBHIDDevice_dialog.ui">
+    <CustomBuild Include="usbhiddevice_dialog.ui">
       <Filter>Form Files</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="USBHIDDeviceplugin.rc" />
+    <ResourceCompile Include="usbhiddeviceplugin.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="licenseHeader.licenseheader" />
-    <None Include="USBHIDDevice.json" />
+    <None Include="licenseheader.licenseheader" />
+    <None Include="usbhiddevice.json" />
   </ItemGroup>
 </Project>

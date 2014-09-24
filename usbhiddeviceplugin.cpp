@@ -17,8 +17,8 @@
 //
 
 
-#include "USBHIDDeviceplugin.h"
-#include "USBHIDDevice.h"
+#include "usbhiddeviceplugin.h"
+#include "usbhiddevice.h"
 #include "defines.h"
 
 Q_DECLARE_METATYPE(USBHIDDevice*)

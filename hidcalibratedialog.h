@@ -23,8 +23,8 @@
 #include <QDialog>
 #include "ui_hidcalibratedialog.h"
 #include "renderarea.h"
-#include "USBHIDDevice.h"
-#include "Global.h"
+#include "usbhiddevice.h"
+#include "global.h"
 
 class USBHIDDevice;
 class HIDCalibrateDialog : public QDialog

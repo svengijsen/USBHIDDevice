@@ -22,7 +22,7 @@
 
 #include <QBrush>
 #include <QWidget>
-#include "Global.h"
+#include "global.h"
 //#include <QPen>
 //#include <QPixmap>
 

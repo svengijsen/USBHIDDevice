@@ -17,7 +17,7 @@
 //
 
 
-#include "USBHIDDevice.h"
+#include "usbhiddevice.h"
 #include "hidcapturethread.h"
 #include <QMutex>
 

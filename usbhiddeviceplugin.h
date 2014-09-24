@@ -28,8 +28,8 @@
 #include <Qlibrary>
 
 #include "plugininterface.h"
-#include "USBHIDDevice_dialog.h"
-#include "USBHIDDevice.h"
+#include "usbhiddevice_dialog.h"
+#include "usbhiddevice.h"
 #include "defines.h"
 
 QT_BEGIN_NAMESPACE
@@ -38,7 +38,7 @@ QT_END_NAMESPACE
 class USBHIDDevicePlugin : public QObject, DeviceInterface
 {
     Q_OBJECT
-	Q_PLUGIN_METADATA(IID "BrainStim.Plugins.Devices" "USBHIDDevice.json")
+	Q_PLUGIN_METADATA(IID "BrainStim.Plugins.Devices" "usbhiddevice.json")
     Q_INTERFACES(DeviceInterface)
 
 public:

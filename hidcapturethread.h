@@ -27,7 +27,7 @@
 #include <QFile>
 #include <QMutex>
 #include <QList>
-#include "Global.h"
+#include "global.h"
 
 class HIDCaptureThread : public QThread
 {

@@ -31,7 +31,7 @@
 #include "hidapi.h"
 #include "hidcalibratedialog.h"
 #include "hidcapturethread.h"
-//#include "Global.h"
+//#include "global.h"
 
 class HIDCalibrateDialog;
 //!  The USBHIDDevice class. 

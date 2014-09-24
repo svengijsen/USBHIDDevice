@@ -28,7 +28,7 @@
 #include <Windows.h>
 #include <QDialog>
 #include <QThread>
-#include "USBHIDDevice.h"
+#include "usbhiddevice.h"
 
 
 class USBHIDDevice_Dialog : public QDialog, private Ui::USBHIDDevice_DialogClass

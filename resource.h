@@ -21,7 +21,7 @@
 
 //{{NO_DEPENDENCIES}}
 // Microsoft Visual C++ generated include file.
-// Used by USBHIDDeviceplugin.rc
+// Used by usbhiddeviceplugin.rc
 
 // Next default values for new objects
 // 
