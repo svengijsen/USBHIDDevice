@@ -1,5 +1,5 @@
 //USBHIDDeviceplugin
-//Copyright (C) 2014  Sven Gijsen
+//Copyright (C) 2015  Sven Gijsen
 //
 //This file is part of BrainStim.
 //BrainStim is free software: you can redistribute it and/or modify
@@ -29,6 +29,7 @@ USBHIDDevicePlugin::USBHIDDevicePlugin(QObject *parent)
 	USBHIDDeviceObject = new USBHIDDevice(0x181b, 0x4002, parent);
 	USBHIDDeviceDiagObject = new USBHIDDevice_Dialog();	
 	strPluginInformation = PLUGIN_INFORMATION;
+	strPluginInternalName = PLUGIN_INTERNAL_NAME;
 }
 
 USBHIDDevicePlugin::~USBHIDDevicePlugin()
