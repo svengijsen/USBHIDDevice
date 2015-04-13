@@ -1,0 +1,8 @@
+<RCC>
+	<qresource prefix="dataUSBHIDDevice">
+		<file>resources/usbhiddeviceplugin_Win32_Debug.ini</file>
+		<file>resources/usbhiddeviceplugin_Win32_Release.ini</file>
+		<file>resources/usbhiddeviceplugin_x64_Debug.ini</file>
+		<file>resources/usbhiddeviceplugin_x64_Release.ini</file>
+	</qresource>
+</RCC>
