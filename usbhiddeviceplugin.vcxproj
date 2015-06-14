@@ -149,20 +149,18 @@
     <PostBuildEvent>
       <Command>echo POSTBUILDSTEP for $(ProjectName)
 
-xcopy "$(TargetPath)" "$(BRAINSTIM_HOME)\Install\plugins\$(Platform)\" /i /d /y
+xcopy "$(TargetPath)" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
-xcopy "$(HIDAPI)\bin\hidapi$(DebugSuffix)_$(Platform).dll" "$(BRAINSTIM_HOME)\Install\" /i /d /y
+xcopy "$(HIDAPI)\bin\hidapi$(DebugSuffix)_$(Platform).dll" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
-xcopy "$(ProjectDir)resources\$(ProjectName)_$(Platform)_$(Configuration).ini" "$(BRAINSTIM_HOME)\Install\Plugins\$(Platform)\" /i /d /y
+xcopy "$(ProjectDir)resources\$(ProjectName)_$(Platform)_$(Configuration).ini" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
 
-REM xcopy "$(TargetDir)$(TargetName).pdb" "$(SolutionDir)$(OutDir)" /i /d /y
-REM if errorlevel 1 goto BuildEventFailed
-REM echo GAC of: "$(SolutionDir)$(OutDir)$(TargetFileName)"
-REM gacutil.exe /nologo /i "$(SolutionDir)$(OutDir)$(TargetFileName)" /f
-REM if errorlevel 1 goto BuildEventFailed
-REM Exit properly because the build will not fail
-REM unless the final step exits with an error code
+SET PATH=%PATH%;$(QTDIR)\bin
+CD $(BRAINSTIM_HOME)\Install\
+$(BRAINSTIM_HOME)\Install\UpdateMngr_$(Platform)_$(Configuration) -p "$(ProjectDir)build\$(Platform)\$(Configuration)\$(ProjectName)_$(Platform)_$(Configuration).ini" install -o
+if errorlevel 1 goto BuildEventFailed
+
 goto BuildEventOK
 :BuildEventFailed
 echo POSTBUILDSTEP for $(ProjectName) FAILED
@@ -226,20 +224,18 @@ echo POSTBUILDSTEP for $(ProjectName) COMPLETED OK
     <PostBuildEvent>
       <Command>echo POSTBUILDSTEP for $(ProjectName)
 
-xcopy "$(TargetPath)" "$(BRAINSTIM_HOME)\Install\plugins\$(Platform)\" /i /d /y
+xcopy "$(TargetPath)" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
-xcopy "$(HIDAPI)\bin\hidapi$(DebugSuffix)_$(Platform).dll" "$(BRAINSTIM_HOME)\Install\" /i /d /y
+xcopy "$(HIDAPI)\bin\hidapi$(DebugSuffix)_$(Platform).dll" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
-xcopy "$(ProjectDir)resources\$(ProjectName)_$(Platform)_$(Configuration).ini" "$(BRAINSTIM_HOME)\Install\Plugins\$(Platform)\" /i /d /y
+xcopy "$(ProjectDir)resources\$(ProjectName)_$(Platform)_$(Configuration).ini" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
 
-REM xcopy "$(TargetDir)$(TargetName).pdb" "$(SolutionDir)$(OutDir)" /i /d /y
-REM if errorlevel 1 goto BuildEventFailed
-REM echo GAC of: "$(SolutionDir)$(OutDir)$(TargetFileName)"
-REM gacutil.exe /nologo /i "$(SolutionDir)$(OutDir)$(TargetFileName)" /f
-REM if errorlevel 1 goto BuildEventFailed
-REM Exit properly because the build will not fail
-REM unless the final step exits with an error code
+SET PATH=%PATH%;$(QTDIR)\bin
+CD $(BRAINSTIM_HOME)\Install\
+$(BRAINSTIM_HOME)\Install\UpdateMngr_$(Platform)_$(Configuration) -p "$(ProjectDir)build\$(Platform)\$(Configuration)\$(ProjectName)_$(Platform)_$(Configuration).ini" install -o
+if errorlevel 1 goto BuildEventFailed
+
 goto BuildEventOK
 :BuildEventFailed
 echo POSTBUILDSTEP for $(ProjectName) FAILED
@@ -300,20 +296,18 @@ echo POSTBUILDSTEP for $(ProjectName) COMPLETED OK
     <PostBuildEvent>
       <Command>echo POSTBUILDSTEP for $(ProjectName)
 
-xcopy "$(TargetPath)" "$(BRAINSTIM_HOME)\Install\plugins\$(Platform)\" /i /d /y
+xcopy "$(TargetPath)" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
-xcopy "$(HIDAPI)\bin\hidapi$(DebugSuffix)_$(Platform).dll" "$(BRAINSTIM_HOME)\Install\" /i /d /y
+xcopy "$(HIDAPI)\bin\hidapi$(DebugSuffix)_$(Platform).dll" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
-xcopy "$(ProjectDir)resources\$(ProjectName)_$(Platform)_$(Configuration).ini" "$(BRAINSTIM_HOME)\Install\Plugins\$(Platform)\" /i /d /y
+xcopy "$(ProjectDir)resources\$(ProjectName)_$(Platform)_$(Configuration).ini" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
 
-REM xcopy "$(TargetDir)$(TargetName).pdb" "$(SolutionDir)$(OutDir)" /i /d /y
-REM if errorlevel 1 goto BuildEventFailed
-REM echo GAC of: "$(SolutionDir)$(OutDir)$(TargetFileName)"
-REM gacutil.exe /nologo /i "$(SolutionDir)$(OutDir)$(TargetFileName)" /f
-REM if errorlevel 1 goto BuildEventFailed
-REM Exit properly because the build will not fail
-REM unless the final step exits with an error code
+SET PATH=%PATH%;$(QTDIR)\bin
+CD $(BRAINSTIM_HOME)\Install\
+$(BRAINSTIM_HOME)\Install\UpdateMngr_$(Platform)_$(Configuration) -p "$(ProjectDir)build\$(Platform)\$(Configuration)\$(ProjectName)_$(Platform)_$(Configuration).ini" install -o
+if errorlevel 1 goto BuildEventFailed
+
 goto BuildEventOK
 :BuildEventFailed
 echo POSTBUILDSTEP for $(ProjectName) FAILED
@@ -376,20 +370,18 @@ echo POSTBUILDSTEP for $(ProjectName) COMPLETED OK
     <PostBuildEvent>
       <Command>echo POSTBUILDSTEP for $(ProjectName)
 
-xcopy "$(TargetPath)" "$(BRAINSTIM_HOME)\Install\plugins\$(Platform)\" /i /d /y
+xcopy "$(TargetPath)" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
-xcopy "$(HIDAPI)\bin\hidapi$(DebugSuffix)_$(Platform).dll" "$(BRAINSTIM_HOME)\Install\" /i /d /y
+xcopy "$(HIDAPI)\bin\hidapi$(DebugSuffix)_$(Platform).dll" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
-xcopy "$(ProjectDir)resources\$(ProjectName)_$(Platform)_$(Configuration).ini" "$(BRAINSTIM_HOME)\Install\Plugins\$(Platform)\" /i /d /y
+xcopy "$(ProjectDir)resources\$(ProjectName)_$(Platform)_$(Configuration).ini" "$(ProjectDir)\build\$(Platform)\$(Configuration)\" /i /d /y
 if errorlevel 1 goto BuildEventFailed
 
-REM xcopy "$(TargetDir)$(TargetName).pdb" "$(SolutionDir)$(OutDir)" /i /d /y
-REM if errorlevel 1 goto BuildEventFailed
-REM echo GAC of: "$(SolutionDir)$(OutDir)$(TargetFileName)"
-REM gacutil.exe /nologo /i "$(SolutionDir)$(OutDir)$(TargetFileName)" /f
-REM if errorlevel 1 goto BuildEventFailed
-REM Exit properly because the build will not fail
-REM unless the final step exits with an error code
+SET PATH=%PATH%;$(QTDIR)\bin
+CD $(BRAINSTIM_HOME)\Install\
+$(BRAINSTIM_HOME)\Install\UpdateMngr_$(Platform)_$(Configuration) -p "$(ProjectDir)build\$(Platform)\$(Configuration)\$(ProjectName)_$(Platform)_$(Configuration).ini" install -o
+if errorlevel 1 goto BuildEventFailed
+
 goto BuildEventOK
 :BuildEventFailed
 echo POSTBUILDSTEP for $(ProjectName) FAILED
