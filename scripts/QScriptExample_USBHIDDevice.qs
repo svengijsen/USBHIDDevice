@@ -1,13 +1,10 @@
 //Construct a new Plugin object
 ExampleDevicePluginObj = new USBHIDDevice();
 //Configure the Plugin Object
-ExampleDevicePluginObj.SetVendorID(0x181b);
-ExampleDevicePluginObj.SetProductID(0x4002);
-
-
-//Construct a QTimer
-var timer = new QTimer(this);
-
+var hVendorID = 0x181b;
+var hProductID = 0x4002;
+//Declare some variabels
+var nTimerCounter = 5;
 
 //Declare some functions
 function mySignalFunction()
@@ -56,7 +53,6 @@ function PauseMills(millis)
 	while(curDate-date < millis)
 }
 
-var nTimerCounter = 5;
 function timerFunction() //The first function demonstrates how a QTimer constructed from within the script can be connected to a custom defined script function
 { 
 	Log("timerFunction1() is to be called " + nTimerCounter + "times" ) 
@@ -76,50 +72,60 @@ function cleanup() //First we define a function for the necessary cleanup before
 {
 	timer.stop(); //Stop the timer
 	timer.timeout.disconnect(this, this.timerFunction); //Disconnect again
-	timerFunction = null; //cleanup the function
 	ExampleDevicePluginObj.CaptureThreadStarted.disconnect(this, this.mySignalFunction); 
 	ExampleDevicePluginObj.CaptureThreadStopped.disconnect(this, this.CaptureStopped); 
 	//ExampleDevicePluginObj.CaptureThreadJoystickChanged.disconnect(this, this.myTriggeredFunction); 
 	ExampleDevicePluginObj.CaptureThreadButtonTriggered.disconnect(this, this.myButtonTriggerFunction);
-	CaptureStopped = null;
-	CalibrateStopped = null;
-	mySignalFunction = null; //Cleanup the function
-	myButtonTriggerFunction = null;
-	PauseMills = null; //Cleanup the function
-	cleanup = null; //Cleanup the function
-	//ExampleDevicePluginObj = null;
+	cleanup_functions();
 	Log("CleanUp Finished...");
 }
 
-//Example usage of the Example property
-//ExampleDevicePluginObj.setExampleProperty(99);
-//Log(ExampleDevicePluginObj.ExampleProperty);
-//ExampleDevicePluginObj.doMeasurement();
-//ExampleDevicePluginObj.ExampleProperty = 88;
-//Log(ExampleDevicePluginObj.ExampleProperty);
+function cleanup_functions()//cleanup the functions
+{
+	timerFunction = null; 
+	CaptureStopped = null;
+	CalibrateStopped = null;
+	mySignalFunction = null;
+	myTriggeredFunction = null;
+	myButtonTriggerFunction = null;
+	PauseMills = null; 
+	cleanup = null;
+	cleanup_functions = null;
+}
 
+if(ExampleDevicePluginObj.Initialize(hVendorID, hProductID))
+{
+	//ExampleDevicePluginObj.SetVendorID(hVendorID); //is automatically done using the above Initialize() method!
+	//ExampleDevicePluginObj.SetProductID(hProductID); //is automatically done using the above Initialize() method!
+	
+	//Construct a QTimer
+	var timer = new QTimer(this);
 
+	ExampleDevicePluginObj.Calibrate();
+	Log("Calibration done...");
+	
+	//Connect the Signal/Slots
+	ExampleDevicePluginObj.CaptureThreadStarted.connect(this, this.mySignalFunction); 
+	ExampleDevicePluginObj.CaptureThreadStopped.connect(this, this.CaptureStopped); 
+	ExampleDevicePluginObj.CalibrateThreadStopped.connect(this, this.CalibrateStopped); 
+	//ExampleDevicePluginObj.CaptureThreadJoystickChanged.connect(this, this.myTriggeredFunction); 
+	ExampleDevicePluginObj.CaptureThreadButtonTriggered.connect(this, this.myButtonTriggerFunction);//unsigned char
 
-ExampleDevicePluginObj.Calibrate();
-Log("Calibration done...");
-//ExampleDevicePluginObj.Calibrate();
-//Log("Calibration done...");
+	ExampleDevicePluginObj.WriteCapturedDataToFile(true,BrainStim.getActiveDocumentFileLocation() + "/output.txt",true,true);//WriteCapturedDataToFile(bool bWriteToFile, QString qsFileName, bool bWriteHeaderInfo, bool bWriteCalibratedData)
+	ExampleDevicePluginObj.ConfigureHIDTriggers(false,false,3,1);//=DetectionMethod::MaskedValueChangedHigh);
+	ExampleDevicePluginObj.ConfigureHIDTriggers(true,true,3,1);//=DetectionMethod::MaskedValueChangedHigh);
+	//ConfigureHIDTriggers(bool bActivateJoystickTrigger = true, bool bActivateButtonTriggers = false, unsigned char cButtonMask = 255, DetectionMethod ButtonDetectDetectionMethod = DetectionMethod::MaskedValueChanged);
+	ExampleDevicePluginObj.ConfigureHIDFiltering(true, 1, true, 10);
+	//void ConfigureHIDFiltering(bool bActivateJoystickStabilisation, int nJoystickStabilisationThreshold, bool bActivateJoystickHistory, int nJoystickHistorySize);
 
-
-//Connect the Signal/Slots
-ExampleDevicePluginObj.CaptureThreadStarted.connect(this, this.mySignalFunction); 
-ExampleDevicePluginObj.CaptureThreadStopped.connect(this, this.CaptureStopped); 
-ExampleDevicePluginObj.CalibrateThreadStopped.connect(this, this.CalibrateStopped); 
-//ExampleDevicePluginObj.CaptureThreadJoystickChanged.connect(this, this.myTriggeredFunction); 
-ExampleDevicePluginObj.CaptureThreadButtonTriggered.connect(this, this.myButtonTriggerFunction);//unsigned char
-
-ExampleDevicePluginObj.WriteCapturedDataToFile(true,"d:\\temp\\output.txt",true,true);//WriteCapturedDataToFile(bool bWriteToFile, QString qsFileName, bool bWriteHeaderInfo, bool bWriteCalibratedData)
-ExampleDevicePluginObj.ConfigureHIDTriggers(false,false,3,1);//=DetectionMethod::MaskedValueChangedHigh);
-ExampleDevicePluginObj.ConfigureHIDTriggers(true,true,3,1);//=DetectionMethod::MaskedValueChangedHigh);
-//ConfigureHIDTriggers(bool bActivateJoystickTrigger = true, bool bActivateButtonTriggers = false, unsigned char cButtonMask = 255, DetectionMethod ButtonDetectDetectionMethod = DetectionMethod::MaskedValueChanged);
-ExampleDevicePluginObj.ConfigureHIDFiltering(true, 1, true, 10);
-//void ConfigureHIDFiltering(bool bActivateJoystickStabilisation, int nJoystickStabilisationThreshold, bool bActivateJoystickHistory, int nJoystickHistorySize);
-
-ExampleDevicePluginObj.StartCaptureThread();
-timer.timeout.connect(this, this.timerFunction);
-timer.start(1000);
+	ExampleDevicePluginObj.StartCaptureThread();
+	timer.timeout.connect(this, this.timerFunction);
+	timer.start(1000);
+}
+else
+{
+	Log("Could not open the HID device, is it properly connected and correctly configured?")
+	ExampleDevicePluginObj = null;
+	cleanup_functions();
+	Log("done...");
+}

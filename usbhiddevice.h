@@ -28,6 +28,7 @@
 #include <QDesktopWidget>
 #include <QMouseEvent>
 #include "mainappinfo.h"
+//#include "hid.cpp"
 #include "hidapi.h"
 #include "hidcalibratedialog.h"
 #include "hidcapturethread.h"
@@ -97,6 +98,7 @@ public slots:
 	void StopCaptureThread(bool bWasCalibrationThread = false);
 	void SetVendorID(unsigned short vendor_id);
 	void SetProductID(unsigned short product_id);
+	bool Initialize(unsigned short vendor_id, unsigned short product_id);
 
 	void WriteCapturedDataToFile(bool bWriteToFile, QString qsFileName, bool bWriteHeaderInfo, bool bWriteFilteredData);
 	void ConfigureHIDTriggers(bool bActivateJoystickTrigger, bool bActivateButtonTriggers, unsigned char cButtonMask, short ButtonDetectCaptureMethod);

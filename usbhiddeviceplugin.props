@@ -5,7 +5,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros">
   	<!-- some comments... -->
-    <HIDAPI>$(LIBRARY_DIR)\HIDAPI\$(Platform)</HIDAPI>
+    <HIDAPI>$(LIBRARY_DIR)\HIDAPI\windows</HIDAPI>
   </PropertyGroup>
   <ItemDefinitionGroup />
   <ItemGroup>

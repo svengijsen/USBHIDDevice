@@ -111,6 +111,19 @@ void USBHIDDevice::SetProductID(unsigned short product_id)
 	m_ProductId = product_id;
 }
 
+bool USBHIDDevice::Initialize(unsigned short vendor_id, unsigned short product_id)
+{
+	hid_device *handle = hid_open(vendor_id, product_id, NULL);
+	if (handle)
+	{
+		hid_close(handle);
+		SetVendorID(vendor_id);
+		SetProductID(product_id);
+		return true;
+	}
+	return false;
+}
+
 void USBHIDDevice::ResetCalibrationData()
 {
 	/*! Resets the internal calibration data for the current USB HID Device. */
