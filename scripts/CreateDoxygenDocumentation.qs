@@ -33,25 +33,25 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	changeSet = BrainStim_CreateArray(8,2);
 	if(nCounter==1)
 	{
-		ComponentName = "<Rename>Plugin";		
+		ComponentName = "USBHIDDevicePlugin";		
 		Log("Component Name: " + ComponentName);
 		LastComponentVersion  = "1.0.0.1";
 		Log("Last Component Version: " + LastComponentVersion);
 		Log("\n");
 		fileDest = ComponentName + ".cfg";
 		changeSet[0][0] = preFix + "PROJECT_NAME" + postFix;
-		changeSet[0][1] = "\"FireBird Client Device script class\"";
+		changeSet[0][1] = "\"USBHIDDevice plugin script class\"";
 		changeSet[1][0] = preFix + "PROJECT_NUMBER" + postFix;
 		changeSet[1][1] = "\"" + LastComponentVersion + "\"";
 		changeSet[2][0] = preFix + "PROJECT_BRIEF" + postFix;
-		changeSet[2][1] = "\"FireBird Client Device script class reference.\"";
+		changeSet[2][1] = "\"USBHIDDevice plugin script class reference.\"";
 		changeSet[3][0] = preFix + "PROJECT_LOGO" + postFix;
 		changeSet[3][1] = "";//No quotes for empty!
 		changeSet[4][0] = preFix + "OUTPUT_DIRECTORY" + postFix;
-		changeSet[4][1] = "\"../<Rename>\"";//"\"../References/Script/<Rename>Plugin\"";
+		changeSet[4][1] = "\"../USBHIDDevice\"";//"\"../References/Script/USBHIDDevicePlugin\"";
 		changeSet[5][0] = preFix + "INPUT" + postFix;
-		changeSet[5][1] = "../../<Rename>/<Rename>.h \\\n" +
-					  "../../<Rename>/<Rename>.cpp \\\n";
+		changeSet[5][1] = "../../USBHIDDevice/USBHIDDevice.h \\\n" +
+					  "../../USBHIDDevice/USBHIDDevice.cpp \\\n";
 		changeSet[6][0] = preFix + "QHP_NAMESPACE" + postFix;
 		changeSet[6][1] = "BrainStim.doxygen.Project";	
 		changeSet[7][0] = preFix + "PREDEFINED" + postFix; //see http://www.stack.nl/~dimitri/doxygen/preprocessing.html //see http://www.stack.nl/~dimitri/doxygen/preprocessing.html

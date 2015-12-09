@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<QHelpCollectionProject version="1.0">
+<!--doc-version-qhelp-begin-->
+<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151191596),BrainStim version 1.0.0.1, Plugin version 1.0.0.1-->
+  <assistant>
+		<title>USBHIDDevice plugin v1.0.0.1</title>
+    <applicationIcon>USBHIDDevice/images/logo.jpg</applicationIcon>
+    <cacheDirectory>svengijsen/BrainStim/Plugins/USBHIDDevice</cacheDirectory>
+    <startPage>qthelp://com.svengijsen.brainstim/doc/plugins/USBHIDDevice/index.html</startPage>
+    <aboutMenuText>
+        <text>About USBHIDDevice</text>
+    </aboutMenuText>
+    <aboutDialog>
+        <file>USBHIDDevice/additional/about.txt</file>
+        <icon>USBHIDDevice/images/logo.jpg</icon>
+    </aboutDialog>
+    <enableDocumentationManager>false</enableDocumentationManager>
+    <enableAddressBar>false</enableAddressBar>
+    <enableFilterFunctionality>false</enableFilterFunctionality>
+  </assistant>
+  <docFiles>
+  	<generate>
+    	<file>
+      	<input>USBHIDDevice.qhp</input>
+        <output>USBHIDDevice.qch</output>
+      </file>
+    </generate>
+    <register>
+    	<file>USBHIDDevice.qch</file>
+    </register>
+  </docFiles>
+	</QHelpCollectionProject>
+<!--doc-version-qhelp-end-->
