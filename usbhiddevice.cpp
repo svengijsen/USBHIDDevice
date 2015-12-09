@@ -182,13 +182,6 @@ bool USBHIDDevice::Calibrate()
 	return bRetVal;
 }
 
-//! For configuring the current HID Device Joystick Triggers for the capture thread.
-/*!
-    \param bActivateJoystickTrigger determines whether the Joysticks position changes should be used/captured during a capture thread.
-	\param bActivateButtonTriggers determines whether the Joysticks button changes should be used/captured during a capture thread.
-	\param cButtonMask a bit-mask pattern (one byte) representing which bits(buttons) should be taken into account during the capture thread.
-	\param sButtonDetectCaptureMethod the capture detection method to use(see the #USBHIDDeviceNameSpace::CaptureMethod).
-*/
 void USBHIDDevice::ConfigureHIDTriggers(bool bActivateJoystickTrigger, bool bActivateButtonTriggers, unsigned char cButtonMask, short sButtonDetectCaptureMethod)
 {
 	m_bActivateJoystickTrigger = bActivateJoystickTrigger;
@@ -197,13 +190,6 @@ void USBHIDDevice::ConfigureHIDTriggers(bool bActivateJoystickTrigger, bool bAct
 	m_sButtonDetectCaptureMethod = sButtonDetectCaptureMethod;
 }
 
-//! For configuring the current HID Device Joystick Position Filtering for the capture thread.
-/*!
-    \param bActivateJoystickStabilisation whether the Joystick Stabilizing filter should be enabled during a capture thread.
-	\param nJoystickStabilisationThreshold the threshold for the Joystick Stabilizing filter during a capture thread.
-	\param bActivateJoystickHistory whether the Joystick History (LowPass) filter should be enabled during a capture thread.
-	\param nJoystickHistorySize the size for the Joystick History (LowPass) filter during a capture thread.
-*/
 void USBHIDDevice::ConfigureHIDFiltering(bool bActivateJoystickStabilisation, int nJoystickStabilisationThreshold, bool bActivateJoystickHistory, int nJoystickHistorySize)
 {
 	m_bActivateJoystickStabilisation = bActivateJoystickStabilisation;
@@ -212,13 +198,6 @@ void USBHIDDevice::ConfigureHIDFiltering(bool bActivateJoystickStabilisation, in
 	m_nJoystickHistorySize = nJoystickHistorySize;
 }
 
-//! For configuring the Mouse Emulation feature of the current HID Device Joystick during a capture thread.
-/*!
-    \param bEnable whether the Mouse Emulation should be enabled (or disabled) for the capture thread.
-	\param bFullScreenMode whether the Mouse Emulation should be performed in Full Screen Mode (or not) for the capture thread.
-	\param bEnableLeftMouse whether the Left Mouse button should be emulated during the Mouse Emulation of capture thread.
-	\param bEnableRightMouse whether the Right Mouse button should be emulated during the Mouse Emulation of capture thread.
-*/
 void USBHIDDevice::EmulateHIDMouse(bool bEnable, bool bFullScreenMode, bool bEnableLeftMouse, bool bEnableRightMouse)
 {
 	//Get The screen resolution
@@ -342,13 +321,6 @@ void USBHIDDevice::UpdateHIDMouseEmuButtons(unsigned char ButtonByteValue,unsign
 	MouseEmuMutex.unlock();
 }
 
-//! For configuring the logging of the captured data.
-/*!
-    \param bWriteToFile whether the captured data should be written to a file (or not) during the capture thread.
-	\param qsFileName the file-name of the file where the captured data is written to during the capture thread.
-	\param bWriteHeaderInfo whether a header (first line in file) before the captured data should be written to a file (or not) during the capture thread.
-	\param bWriteCalibratedData whether the calibrated (or raw) captured data should be written to a file during the capture thread.
-*/
 void USBHIDDevice::WriteCapturedDataToFile(bool bWriteToFile, QString qsFileName, bool bWriteHeaderInfo, bool bWriteCalibratedData)
 {
 	m_bWriteToFile = bWriteToFile;
@@ -358,12 +330,6 @@ void USBHIDDevice::WriteCapturedDataToFile(bool bWriteToFile, QString qsFileName
 		m_qsFileName = qsFileName;
 }
 
-//! For starting a new USBHIDDevice Capture thread, only one instance can be active at the same moment.
-/*!
-    \param bIsCalibrationThread whether the internal calibration data should be automatically updated (or not) if needed.
-	\return Whether the capture thread could be successfully started.
-	\sa StopCaptureThread()
-*/
 bool USBHIDDevice::StartCaptureThread(bool bIsCalibrationThread)
 {
 	USBHIDDeviceNameSpace::CaptureMethod CapDecMethod;
@@ -421,18 +387,3 @@ void USBHIDDevice::StopCaptureThread(bool bWasCalibrationThread)
 		HIDCapThread = NULL;
 	}
 }
-
-
-//// Register for device connect notification
-//DEV_BROADCAST_DEVICEINTERFACE devInt;
-//ZeroMemory( &devInt, sizeof(devInt) );
-//devInt.dbcc_size = sizeof(DEV_BROADCAST_DEVICEINTERFACE);
-//devInt.dbcc_devicetype = DBT_DEVTYP_DEVICEINTERFACE;
-//devInt.dbcc_classguid = GUID_DEVINTERFACE_VOLUME;
-//
-//m_hDeviceNotify =
-//RegisterDeviceNotification( winId(), &devInt, DEVICE_NOTIFY_WINDOW_HANDLE );   
-//if(m_hDeviceNotify == NULL)
-//{
-//	qDebug() << "Failed to register device notification";
-//} // end if

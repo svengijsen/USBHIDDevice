@@ -94,15 +94,49 @@ public:
 public slots:
 	bool makeThisAvailableInScript(QString strObjectScriptName = "", QObject *engine = NULL);//To make the objects (e.g. defined in a *.exml file) available in the script
 	bool Calibrate();
+	//! For starting a new USBHIDDevice Capture thread, only one instance can be active at the same moment.
+	/*!
+	\param bIsCalibrationThread whether the internal calibration data should be automatically updated (or not) if needed.
+	\return Whether the capture thread could be successfully started.
+	\sa StopCaptureThread()
+	*/
 	bool StartCaptureThread(bool bIsCalibrationThread = false);
 	void StopCaptureThread(bool bWasCalibrationThread = false);
 	void SetVendorID(unsigned short vendor_id);
 	void SetProductID(unsigned short product_id);
 	bool Initialize(unsigned short vendor_id, unsigned short product_id);
 
+	//! For configuring the logging of the captured data.
+	/*!
+	\param bWriteToFile whether the captured data should be written to a file (or not) during the capture thread.
+	\param qsFileName the file-name of the file where the captured data is written to during the capture thread.
+	\param bWriteHeaderInfo whether a header (first line in file) before the captured data should be written to a file (or not) during the capture thread.
+	\param bWriteCalibratedData whether the calibrated (or raw) captured data should be written to a file during the capture thread.
+	*/
 	void WriteCapturedDataToFile(bool bWriteToFile, QString qsFileName, bool bWriteHeaderInfo, bool bWriteFilteredData);
+	//! For configuring the current HID Device Joystick Triggers for the capture thread.
+	/*!
+	\param bActivateJoystickTrigger determines whether the Joysticks position changes should be used/captured during a capture thread.
+	\param bActivateButtonTriggers determines whether the Joysticks button changes should be used/captured during a capture thread.
+	\param cButtonMask a bit-mask pattern (one byte) representing which bits(buttons) should be taken into account during the capture thread.
+	\param sButtonDetectCaptureMethod the capture detection method to use(see the #USBHIDDeviceNameSpace::CaptureMethod).
+	*/
 	void ConfigureHIDTriggers(bool bActivateJoystickTrigger, bool bActivateButtonTriggers, unsigned char cButtonMask, short ButtonDetectCaptureMethod);
+	//! For configuring the current HID Device Joystick Position Filtering for the capture thread.
+	/*!
+	\param bActivateJoystickStabilisation whether the Joystick Stabilizing filter should be enabled during a capture thread.
+	\param nJoystickStabilisationThreshold the threshold for the Joystick Stabilizing filter during a capture thread.
+	\param bActivateJoystickHistory whether the Joystick History (LowPass) filter should be enabled during a capture thread.
+	\param nJoystickHistorySize the size for the Joystick History (LowPass) filter during a capture thread.
+	*/
 	void ConfigureHIDFiltering(bool bActivateJoystickStabilisation, int nJoystickStabilisationThreshold, bool bActivateJoystickHistory, int nJoystickHistorySize);
+	//! For configuring the Mouse Emulation feature of the current HID Device Joystick during a capture thread.
+	/*!
+	\param bEnable whether the Mouse Emulation should be enabled (or disabled) for the capture thread.
+	\param bFullScreenMode whether the Mouse Emulation should be performed in Full Screen Mode (or not) for the capture thread.
+	\param bEnableLeftMouse whether the Left Mouse button should be emulated during the Mouse Emulation of capture thread.
+	\param bEnableRightMouse whether the Right Mouse button should be emulated during the Mouse Emulation of capture thread.
+	*/
 	void EmulateHIDMouse(bool bEnable, bool bFullScreenMode, bool bEnableLeftMouse = false, bool bEnableRightMouse = false);
 	void ResetCalibrationData();
 	
