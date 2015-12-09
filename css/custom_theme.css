@@ -1,0 +1,130 @@
+body {
+  /* padding-top: 		10px; */
+  padding-bottom: 10px;
+}
+
+h1 {
+	color:rgb(34,70,186)
+}
+
+h2 {
+	color:rgb(61,97,220)
+}
+
+h3, h4 {
+	color:rgb(94,123,225)
+}
+
+img.centered
+{
+   display: block;
+   margin: auto;
+}
+
+/* customizing the Google search button*/
+.cse .gsc-search-button input.gsc-search-button-v2,
+input.gsc-search-button-v2 {
+    height: 26px !important;
+    margin-top: 0 !important;
+    min-width: 13px !important;
+    padding: 5px 26px !important;
+    width: 68px !important;
+}
+
+.cse .gsc-search-button input.gsc-search-button-v2:hover,
+input.gsc-search-button-v2:hover {
+	background: rgb(34,70,186) !important;
+}
+
+/* customizing Tocify */
+.tocify {
+    width: 100%;
+    position: relative;
+    margin: 0px 0px 0px 0px
+}
+	
+.nav-list > .active > a,
+.nav-list > .active > a:hover {/*This is the active tocify nav-list item*/
+  color: #000000;/*#ffffff;*/
+  /*text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);*/
+  background-color: rgb(205, 205, 205);/*#0088cc;*/
+}
+
+@media (max-width: 767px) {/* smaller screens */
+	/*
+	.tocify {
+	    width: 100%;
+	    position: relative;
+	    margin: 0px 0px 20px 0px
+	}
+	*/
+	            
+	        
+	        
+	        
+	    width: 50%;
+	    max-height: 90%;
+	    overflow: auto;
+	    margin-left: 2%;
+	    position: fixed;
+	    border: 1px solid #ccc;
+	    webkit-border-radius: 6px;
+	    moz-border-radius: 6px;
+	    border-radius: 6px;
+	/*}*/
+}
+
+/*
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/*
+
+/*Fixed Sidebar*/
+/*
+.sidebar {
+  display: none;
+}
+*/
+
+@media (min-width: 992Px) {
+  .sidebar {
+    position: fixed;
+    margin-top: 50px;
+    /*
+    top: 51px;
+    bottom: 0;
+    left: 0;    
+    margin-top: 50px;
+    padding: 20px;
+    */
+    display: block;
+    z-index: 1000;  
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+    /*background-color: #f5f5f5;
+    border-right: 1px solid #eee;*/
+    /*display: none;*/
+  }
+}
+
+
+
