@@ -19,8 +19,8 @@
 
 //This file implements the UI functionality
 
-#ifndef USBHIDDevice_DIALOG_H
-#define USBHIDDevice_DIALOG_H
+#ifndef USBHIDDEVICE_DIALOG_H
+#define USBHIDDEVICE_DIALOG_H
 
 #include <QDialog>
 #include "ui_USBHIDDevice_dialog.h"
@@ -87,4 +87,4 @@ private slots:
 	void HIDJoystickChanged(int nXpos, int nYpos);
 };
 
-#endif // USBHIDDevice_DIALOG_H
+#endif // USBHIDDEVICE_DIALOG_H

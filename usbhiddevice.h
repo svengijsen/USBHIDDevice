@@ -16,11 +16,9 @@
 //along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
+#ifndef USBHIDDEVICE_H
+#define USBHIDDEVICE_H
 
-//This file defines the script binding interface, all below function are scriptable except for the destructor
-
-#ifndef USBHIDDevice_H
-#define USBHIDDevice_H
 #include <QObject>
 #include <QString>
 #include <QtScript>
@@ -28,16 +26,14 @@
 #include <QDesktopWidget>
 #include <QMouseEvent>
 #include "mainappinfo.h"
-//#include "hid.cpp"
 #include "hidapi.h"
 #include "hidcalibratedialog.h"
 #include "hidcapturethread.h"
-//#include "global.h"
 
 class HIDCalibrateDialog;
 //!  The USBHIDDevice class. 
 /*!
-  The USBHIDDevice can be used to communicate with a USB HID Device.
+  The USBHIDDevice can communicate with a standard USB HID Device and is optimized to handle a variable device (like an optical joystick) from curdes.
 */
 class USBHIDDevice : public QObject, protected QScriptable
 {
@@ -88,7 +84,7 @@ public:
 	USBHIDDevice(const USBHIDDevice& other ){Q_UNUSED(other);}//TODO fill in copy constructor, should be used for the Q_DECLARE_METATYPE macro
 	~USBHIDDevice();
 
-	static QScriptValue ctor__extensionname(QScriptContext* context, QScriptEngine* engine);
+	static QScriptValue ctor_USBHIDDevice(QScriptContext* context, QScriptEngine* engine);
 	void SetCalibrationData(const USBHIDDeviceNameSpace::strcCalibrationData &CalData);
 
 public slots:
@@ -177,4 +173,4 @@ private:
 	float m_fScreenHeightStep;
 };
 
-#endif // USBHIDDevice_H
+#endif // USBHIDDEVICE_H

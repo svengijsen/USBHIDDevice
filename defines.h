@@ -17,20 +17,20 @@
 //
 
 
-#ifndef USBHIDDeviceDEFINES_H
-#define USBHIDDeviceDEFINES_H
+#ifndef USBHIDDEVICEDEFINES_H
+#define USBHIDDEVICEDEFINES_H
 #include "maindefines.h"
 
-//Only edit the below!
-#define PLUGIN_FILE_VERSION_STRING_MAJOR	1  
-#define PLUGIN_FILE_VERSION_STRING_MINOR	0   
-#define PLUGIN_FILE_VERSION_STRING_REVISION	0   
-#define PLUGIN_FILE_VERSION_STRING_BUILD	1   
-#define PLUGIN_PRODUCT_VERSION_STRING_MAJOR	1   
-#define PLUGIN_PRODUCT_VERSION_STRING_MINOR	0   
-#define PLUGIN_PRODUCT_VERSION_STRING_REVISION	0   
-#define PLUGIN_PRODUCT_VERSION_STRING_BUILD	1   
-#define PLUGIN_LEGAL_COPYRIGHT						MAIN_PROGRAM_LEGAL_COPYRIGHT
+
+#define PLUGIN_FILE_VERSION_STRING_MAJOR	1   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
+#define PLUGIN_FILE_VERSION_STRING_MINOR	1   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
+#define PLUGIN_FILE_VERSION_STRING_REVISION	0   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
+#define PLUGIN_FILE_VERSION_STRING_BUILD	1   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
+#define PLUGIN_PRODUCT_VERSION_STRING_MAJOR	1   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
+#define PLUGIN_PRODUCT_VERSION_STRING_MINOR	1   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
+#define PLUGIN_PRODUCT_VERSION_STRING_REVISION	0   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
+#define PLUGIN_PRODUCT_VERSION_STRING_BUILD	1   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
+#define PLUGIN_LEGAL_COPYRIGHT	"Copyright (C) 2016"   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
 #define PLUGIN_AUTHOR_NAME							MAIN_PROGRAM_AUTHOR_NAME
 #define PLUGIN_AUTHOR_EMAIL							MAIN_PROGRAM_AUTHOR_EMAIL
 #define PLUGIN_COMPANY_NAME							MAIN_PROGRAM_COMPANY_NAME
@@ -43,13 +43,13 @@
 #define PLUGIN_FULL_NAME							PLUGIN_INTERNAL_NAME "(v" PLUGIN_FILE_VERSION_STRING ")"
 #define PLUGIN_FILE_DESCRIPTION						"Library that controls the communication with an USB HID Device"
 #define PLUGIN_INFORMATION							PLUGIN_INTERNAL_NAME " Plugin(v" PLUGIN_FILE_VERSION_STRING ")"
-#define PLUGIN_MAIN_PROGRAM_MINIMAL_VERSION	"1.0.0.1"   
+#define PLUGIN_MAIN_PROGRAM_MINIMAL_VERSION	"1.1.0.1"   //Please do not edit this line manually, see PluginBinaryVersioning.qs (151216133132).
 //Only edit until here!
 
 
 #define PLUGIN_FILE_VERSION_STRING				VERSION_STRING_INTERMEDIATE(PLUGIN_FILE_VERSION_STRING_MAJOR,PLUGIN_FILE_VERSION_STRING_MINOR,PLUGIN_FILE_VERSION_STRING_REVISION,PLUGIN_FILE_VERSION_STRING_BUILD)
 #define PLUGIN_PRODUCT_VERSION_STRING			VERSION_STRING_INTERMEDIATE(PLUGIN_PRODUCT_VERSION_STRING_MAJOR,PLUGIN_PRODUCT_VERSION_STRING_MINOR,PLUGIN_PRODUCT_VERSION_STRING_REVISION,PLUGIN_PRODUCT_VERSION_STRING_BUILD)
-#endif // USBHIDDeviceDEFINES_H
+#endif // USBHIDDEVICEDEFINES_H
 
 
 
