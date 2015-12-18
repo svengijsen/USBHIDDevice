@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QtHelpProject version="1.0">
 <!--doc-version-qhelp-namespace-begin-->
-<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151191596),BrainStim version 1.0.0.1, Plugin version 1.0.0.1-->
+<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151116144141),BrainStim version 1.1.0.1, Plugin version 1.1.0.1-->
 	<namespace>com.trolltech.brainstim.plugins.USBHIDDevice</namespace>
 <!--doc-version-qhelp-namespace-end-->
 	<virtualFolder>doc</virtualFolder>
 	<filterSection>
 		<toc>
 <!--doc-version-qhelp-toc-root-begin-->
-<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151191596),BrainStim version 1.0.0.1, Plugin version 1.0.0.1-->
+<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151116144141),BrainStim version 1.1.0.1, Plugin version 1.1.0.1-->
 			<section title="Plugin: USBHIDDevice" ref="./USBHIDDevice/index.html">
 <!--doc-version-qhelp-toc-root-end-->
 <!--doc-version-qhelp-toc-scriptclass-begin-->
-<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151191596),BrainStim version 1.0.0.1, Plugin version 1.0.0.1-->
+<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151116144141),BrainStim version 1.1.0.1, Plugin version 1.1.0.1-->
 				<section title="USBHIDDevice &lt;Script Class&gt;"  ref="./USBHIDDevice/Doxygen/index.html">
 <!--doc-version-qhelp-toc-scriptclass-end-->
 				</section>
@@ -20,13 +20,13 @@
 		</toc>
 		<keywords>
 <!--doc-version-qhelp-keywords-begin-->
-<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151191596),BrainStim version 1.0.0.1, Plugin version 1.0.0.1-->
+<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151116144141),BrainStim version 1.1.0.1, Plugin version 1.1.0.1-->
 			<keyword name="USBHIDDevice" ref="./USBHIDDevice/index.html"/>
 <!--doc-version-qhelp-keywords-end-->
 		</keywords>
 		<files>
 <!--doc-version-qhelp-files-begin-->
-<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151191596),BrainStim version 1.0.0.1, Plugin version 1.0.0.1-->
+<!-- Please do not edit the below line(s) manually, see DocumentVersioning.qs (151116144141),BrainStim version 1.1.0.1, Plugin version 1.1.0.1-->
 			<file>bootstrap/css/*</file>
 			<file>bootstrap/fonts/*</file>
 			<file>bootstrap/js/*</file>

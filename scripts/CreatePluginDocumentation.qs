@@ -16,6 +16,7 @@ var sPluginProjectPath = sScriptPath + "../../";
 var sBinairyPath;
 var sBrainStimProjectDirectory = ToWindowsPath("../../../BrainStim");
 var sQTDirectory = ToWindowsPath("E:/Libraries/Qt5.3.2_32bit/5.3/msvc2013_opengl/");
+var sPluginSourceCodeRepoPath = ToWindowsPath("../../USBHIDDevice/");
 
 InstallProcess.setProcessChannelMode(QProcess.MergedChannels);
 
@@ -213,7 +214,7 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	{
 		tmpStringList = [];//Reset list
 		tmpStringList[0] = sRootPath + sPluginName + ".qhc";//Xcopy only works with "\" for directories!
-		tmpStringList[1] = sRootPath + "build\\Win32\\Release\\";
+		tmpStringList[1] = sPluginSourceCodeRepoPath + "build\\Win32\\Release\\";
 		tmpStringList[2] = "/Y";
 		tmpStringList[3] = "/F";
 		sBinairyPath = "xcopy";
@@ -222,7 +223,7 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	{
 		tmpStringList = [];//Reset list
 		tmpStringList[0] = sRootPath + sPluginName + ".qch";
-		tmpStringList[1] = sRootPath + "build\\Win32\\Release\\";
+		tmpStringList[1] = sPluginSourceCodeRepoPath + "build\\Win32\\Release\\";
 		tmpStringList[2] = "/Y";
 		tmpStringList[3] = "/F";
 		sBinairyPath = "xcopy";
@@ -231,7 +232,7 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	{
 		tmpStringList = [];//Reset list
 		tmpStringList[0] = sRootPath + sPluginName + ".qhc";//Xcopy only works with "\" for directories!
-		tmpStringList[1] = sRootPath + "build\\Win32\\Debug\\";
+		tmpStringList[1] = sPluginSourceCodeRepoPath + "build\\Win32\\Debug\\";
 		tmpStringList[2] = "/Y";
 		tmpStringList[3] = "/F";
 		sBinairyPath = "xcopy";
@@ -240,7 +241,7 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	{
 		tmpStringList = [];//Reset list
 		tmpStringList[0] = sRootPath + sPluginName + ".qch";
-		tmpStringList[1] = sRootPath + "build\\Win32\\Debug\\";
+		tmpStringList[1] = sPluginSourceCodeRepoPath + "build\\Win32\\Debug\\";
 		tmpStringList[2] = "/Y";
 		tmpStringList[3] = "/F";
 		sBinairyPath = "xcopy";
@@ -249,7 +250,7 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	{
 		tmpStringList = [];//Reset list
 		tmpStringList[0] = sRootPath + sPluginName + ".qhc";//Xcopy only works with "\" for directories!
-		tmpStringList[1] = sRootPath + "build\\x64\\Release\\";
+		tmpStringList[1] = sPluginSourceCodeRepoPath + "build\\x64\\Release\\";
 		tmpStringList[2] = "/Y";
 		tmpStringList[3] = "/F";
 		sBinairyPath = "xcopy";
@@ -258,7 +259,7 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	{
 		tmpStringList = [];//Reset list
 		tmpStringList[0] = sRootPath + sPluginName + ".qch";
-		tmpStringList[1] = sRootPath + "build\\x64\\Release\\";
+		tmpStringList[1] = sPluginSourceCodeRepoPath + "build\\x64\\Release\\";
 		tmpStringList[2] = "/Y";
 		tmpStringList[3] = "/F";
 		sBinairyPath = "xcopy";
@@ -267,7 +268,7 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	{
 		tmpStringList = [];//Reset list
 		tmpStringList[0] = sRootPath + sPluginName + ".qhc";//Xcopy only works with "\" for directories!
-		tmpStringList[1] = sRootPath + "build\\x64\\Debug\\";
+		tmpStringList[1] = sPluginSourceCodeRepoPath + "build\\x64\\Debug\\";
 		tmpStringList[2] = "/Y";
 		tmpStringList[3] = "/F";
 		sBinairyPath = "xcopy";
@@ -276,7 +277,7 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	{
 		tmpStringList = [];//Reset list
 		tmpStringList[0] = sRootPath + sPluginName + ".qch";
-		tmpStringList[1] = sRootPath + "build\\x64\\Debug\\";
+		tmpStringList[1] = sPluginSourceCodeRepoPath + "build\\x64\\Debug\\";
 		tmpStringList[2] = "/Y";
 		tmpStringList[3] = "/F";
 		sBinairyPath = "xcopy";

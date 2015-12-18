@@ -35,7 +35,7 @@ for(nCounter=1;nCounter<=sBinairySteps;nCounter++)
 	{
 		ComponentName = "USBHIDDevicePlugin";		
 		Log("Component Name: " + ComponentName);
-		LastComponentVersion  = "1.0.0.1";
+		LastComponentVersion  = "1.1.0.1";
 		Log("Last Component Version: " + LastComponentVersion);
 		Log("\n");
 		fileDest = ComponentName + ".cfg";
